@@ -1,7 +1,7 @@
 <template>
   
 <div class="p-2 w-48 card relative"  v-for="(cards,index) in 5" :key="index">
-<div class="absolute w-full h-full justify-end items-end p-8 flex">
+<div class="absolute w-full h-full justify-end items-end p-8 flex opacity-0 hover:opacity-100">
     <div class="rounded-full bg-green h-10 w-10 flex items-center justify-center">
         <i class="fas fa-play text-white text-xl"></i>
     </div>
