@@ -4,7 +4,7 @@
       <div class="w-56 bg-black h-full flex-none">
         <Sidebar/>
       </div>
-      <div class="w-full h-full relative ">
+      <div class="w-full h-full relative overflow-y-scroll">
 
     <navbar/>
    <router-view/>
@@ -46,4 +46,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+* {
+  transition: ease 0.6s;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full sticky top-0 p-2 flex items-center justify-between">
+  <div class="w-full sticky top-0 p-2 flex items-center justify-between bg-dark">
     <div class="flex items-center">
       <button
         class="
@@ -12,7 +12,7 @@
           opacity-75
           hover:opacity-100
         "
-        @click="prevRoute"
+      @click="$router.go(-1)"
       >
         <i class="fas fa-chevron-left text-xl"></i>
       </button>
@@ -26,7 +26,7 @@
           opacity-75
           hover:opacity-100
         "
-        @click="nextRoute"
+       @click="$router.go(+1)"
       >
         <i class="fas fa-chevron-right text-xl"></i>
       </button>
@@ -100,9 +100,7 @@ export default {
 </script>
 
 <style>
-* {
-  transition: ease 0.2s;
-}
+
 i.userActive {
   transform: rotate(-180deg);
 }
