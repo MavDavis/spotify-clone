@@ -38,6 +38,8 @@
 </div>
       <p class="text-sm text-white font-semibold">Liked Songs</p>
     </button>
+  
+  </div>
     <div class="mx-5">
       <div class="w-full h-10 ">
         <p class=" text-lightest hover:text-white text-sm p-1">
@@ -45,8 +47,22 @@
         </p>
        
       </div>
+      <a class="flex items-center justify-start text-lightest hover:text-white" href="  https://spotify.link/lz04YJ0r9ib?label=sp_cid%3A9e0bd639e6022ce64375727b153bef28" target=”_blank”>
+        <i class="fas fa-arrow-down border rounded-full text-sm px-1 border-lightest mr-3">
+        
+        </i>
+        <p class="text-sm font-semibold">Install App</p>
+      </a>
+      
+    </div>
+<div class="relative pt-4 h-42">
+  <div class="absolute w-full h-full  flex justify-end items-start opacity-0 hover:opacity-100 p-2">
+    <div class="bg-black rounded-full h-6 w-6 text-center">
+      <i class="fas fa-chevron-down text-white"></i>
     </div>
   </div>
+  <img src="" alt="playing">
+</div>
 </template>
 
 <script>

@@ -4,9 +4,13 @@
       <div class="w-56 bg-black h-full flex-none">
         <Sidebar/>
       </div>
+      <div class="w-full h-full relative ">
+
+    <navbar/>
    <router-view/>
+</div>
     </div>
-    <div class="ww-full bg-light" style="height: 12vh">
+    <div class="w-full bg-light" style="height: 12vh">
       <Footer />
     </div>
   </div>
@@ -15,7 +19,7 @@
 <script>
 import axios from "axios";
 import Sidebar from "./components/sidebar.vue";
-
+import navbar from "./components/navbar.vue";
 import Footer from "./components/footer.vue";
 
 export default {
@@ -38,7 +42,7 @@ export default {
         console.error(error);
       });
   },
-  components: { Sidebar, Footer },
+  components: { Sidebar, Footer , navbar},
 };
 </script>
 
