@@ -15,12 +15,13 @@
         <i class="fas fa-shuffle"></i></button>
         <button class="text-lightest hover:text-white">
         <i class="fas fa-backward-step"></i></button>
-        <div @click="isPlaying = !isPlaying">
-          <button v-if="!isPlaying" class="text-lightest mx-5 hover:text-white">
-        <i class="fas fa-2x fa-light fa-circle-play"></i>
+        <div @click="  $store.commit('play')">
+          <button v-if=" $store.state.isPlaying " class="text-lightest mx-5 hover:text-white">
+     <i class="fas fa-2x fa-light fa-pause"></i>
         </button>
         <button v-else class="text-lightest mx-5 hover:text-white">
-        <i class="fas fa-2x fa-light fa-pause"></i>
+                  <i class="fas fa-2x fa-light fa-circle-play"></i>
+   
         </button>
         </div>
         <button class="text-lightest hover:text-white">
