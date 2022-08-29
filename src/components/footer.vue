@@ -15,7 +15,7 @@
         <i class="fas fa-shuffle"></i></button>
         <button class="text-lightest hover:text-white">
         <i class="fas fa-backward-step"></i></button>
-        <div @click=" $store.commit('play')">
+        <div @click=" $store.commit('played')">
           <button v-if=" $store.state.isPlaying " class="text-lightest mx-5 hover:text-white">
      <i class="fas fa-2x fa-light fa-pause"></i>
         </button>

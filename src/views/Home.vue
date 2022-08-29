@@ -8,7 +8,7 @@
 </div>
   <div class="w-full flex-wrap flex ">
 
-    <Card/>
+    <Card :songs="song"/>
   </div>
 </div>
 <div class="px-6  ">
@@ -20,20 +20,28 @@
  </div>
   <div class="w-full flex-wrap flex ">
 
-    <Card/>
+    <Card :songs="songTwo"/>
   </div>
 </div>
 </template>
 
 <script>
 import Card from '../components/card.vue';
-
+import { mapState } from 'vuex'
 export default {
     components: { Card },
-    computed: {
+    computed:  mapState({
     song () {
-      return this.$store.state.count
-    }},
+      return this.$store.state.playlist.slice(0,5)
+    },
+    songTwo () {
+      return this.$store.state.playlist.slice(5,10)
+    }
+  
+  }),
+  created(){
+    console.log(this.song);
+  }
 }
 </script>
 

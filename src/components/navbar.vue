@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full sticky top-0 p-2 flex items-center justify-between bg-dark">
+  <div class="w-full sticky top-0 p-2 flex items-center justify-between bg-dark" style="z-index:100">
     <div class="flex items-center">
       <button
         class="
