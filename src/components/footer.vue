@@ -40,7 +40,7 @@
         <div class="rounded-full bg-white h-2 w-2 -ml-1 shadow"></div>
       </div>
       <div class="text-lightest hover:text-white text-xs -mb-3 ml-2">
-        {{ musicTotalTime }}
+        {{ $store.state.duration}}
       </div>
     </div>
   </div>
@@ -63,7 +63,10 @@ export default {
       isPlaying:false,
     };
   },
-};
+  computed:{
+
+
+}}
 </script>
 
 <style>
