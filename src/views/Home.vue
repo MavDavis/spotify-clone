@@ -29,7 +29,11 @@
 import Card from '../components/card.vue';
 
 export default {
-    components: { Card }
+    components: { Card },
+    computed: {
+    song () {
+      return this.$store.state.count
+    }},
 }
 </script>
 
