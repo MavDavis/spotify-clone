@@ -4,7 +4,7 @@ export default createStore({
     return {
 isPlaying:false
 ,
-index:4,
+index:0,
 
 currentImageSrc:"https://source.unsplash.com/crs2vlkSe98/400x400",
   playlist: [
@@ -70,17 +70,50 @@ currentImageSrc:"https://source.unsplash.com/crs2vlkSe98/400x400",
       }
     ],
     player: new Audio(),
-currentTitle:'Love me',
-currentArtist:'Burna Boy',
+currentTitle:'[FREE] Freestyle Type Beat',
+currentArtist:'Unknown',
     };
   },
   mutations: {
     played(state) {
-      state.isPlaying = !state.isPlaying;
+      state.isPlaying =true;
+      state.currentTitle = state.playlist[state.index].title
+      state.currentArtist = state.playlist[state.index].artist
    state.player.src =state.playlist[state.index].url;
+
    state.player.play()
     },
-    
+    paused(state){
+      state.isPlaying =false;
+      state.player.pause()
+      console.log(state.player.duration)
+      console.log(state.player.src)
+    },
+    next(state){
+      if(state.index <= state.playlist.length - 2 ){
+      state.index =  state.index + 1
+      state.isPlaying = true;
+      state.currentTitle = state.playlist[state.index].title
+      state.currentArtist = state.playlist[state.index].artist
+   state.player.src =state.playlist[state.index].url;
+
+   state.player.play()
+    }
+  
+    state.player.play()
+  },
+  prev(state){
+    if(state.index > 0 ){
+    state.index =  state.index - 1
+    state.isPlaying = true;
+    state.currentTitle = state.playlist[state.index].title
+    state.currentArtist = state.playlist[state.index].artist
+ state.player.src =state.playlist[state.index].url;
+
+ state.player.play()
+  }
+console.log(state.index);
+    }
   },
 });
 

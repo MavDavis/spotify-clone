@@ -10,7 +10,7 @@
    <router-view/>
 </div>
     </div>
-    <div class="w-full bg-light flex justify-between items-center px-3" style="height: 12vh;">
+    <div class="w-full flex" style="height: 12vh;">
       <Footer />
     </div>
   </div>
